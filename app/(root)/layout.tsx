@@ -1,22 +1,23 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { ReactNode } from 'react'
+export const dynamic = 'force-dynamic';
 
-const RootLayout = ({children}:{children:ReactNode}) => {
+import Link from "next/link";
+import Image from "next/image";
+import { ReactNode } from "react";
+
+const Layout = async ({ children }: { children: ReactNode }) => {
+
 
   return (
-    <div>
-      <div className="root-layout">
-        <nav>
-          <Link href="/" className='flex items-center gap-2 ' >
-          <Image src="/logo.svg" alt="logo" width={38} height={32} />
-          <h2 className="text-primary-100">AI-Interview-Prep </h2>
-          </Link>
-        </nav>
-        {children}
-      </div>
+    <div className="root-layout">
+      <nav>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.svg" alt="MockMate Logo" width={38} height={32} />
+          <h2 className="text-primary-100">AI-Interview</h2>
+        </Link>
+      </nav>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default RootLayout;
+export default Layout;
