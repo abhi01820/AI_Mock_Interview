@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠  AI Voice Interview Preparation App
 
-## Getting Started
+**AI-Mock-Interview** is a full-stack AI-powered interview preparation platform that simulates real job interviews using **Vapi AI Voice Agents** and provides **real-time feedback** through **Google Gemini**. Designed with a sleek UI and built with cutting-edge technologies like **Next.js**, **Firebase**, and **Tailwind CSS**, this app gives users the perfect space to practice and refine their interview skills.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📑 Table of Contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [✨ Features](#-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+- [🖼️ Preview](#️-preview)
+- [📁 Project Structure](#-project-structure)
+- [📚 What I Learned](#-what-i-learned)
+- [🙌 Credits](#-credits)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- 🎙️ **AI Voice Interviews** — Conduct voice-based mock interviews using Vapi AI.
+- ⚡ **Instant Feedback** — Get feedback and a detailed transcript powered by Google Gemini.
+- 🔐 **Authentication** — Secure sign-up and login via Firebase.
+- 🧭 **User Dashboard** — View, track, and manage all your interview sessions.
+- 🎨 **Modern UI** — Built with Tailwind CSS and shadcn/ui for a smooth and responsive interface.
+- 📱 **Responsive Design** — Works great across mobile, tablet, and desktop screens.
+- 🔁 **Modular Codebase** — Scalable structure using reusable components and utilities.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech Stack
 
-## Deploy on Vercel
+| Tech        | Purpose                             |
+|-------------|-------------------------------------|
+| Next.js     | Frontend + Backend (App Router)     |
+| Firebase    | Authentication & Firestore DB       |
+| TailwindCSS | Styling                             |
+| shadcn/ui   | Prebuilt UI components              |
+| Vapi AI     | AI Voice Agents                     |
+| Google Gemini | AI Interview Feedback Engine     |
+| Zod         | Form & data validation              |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
