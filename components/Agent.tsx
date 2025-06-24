@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useId, useState } from "react";
 import { vapi } from "@/lib/vapi.sdk";
+import { interviewer } from "@/constants";
 
 enum CallStatus {
   INACTIVE = "INACTIVE",
@@ -17,7 +18,7 @@ interface SavedMessage {
   content: string;
 }
 
-const Agent = ({ userName, userId, type }: AgentProps) => {
+const Agent = ({ userName, userId, type,interviewId,questions }: AgentProps) => {
   const router = useRouter();
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
@@ -54,9 +55,28 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   }, []);
 
 
+  const handleGenerateFeedback=async (messages : 
+    SavedMessage[])=>{
+      console.log('Generate Feedback here . ');
+      const {success , id}={
+        success:true,
+        id:'feedback-id'
+      }
+      if( success && id){
+        router.push(`/interview/${interviewId}/feedback`)
+      }else{
+        console.log("Error saving feedback");
+        router.push('/');
+      }
+    }
+
   useEffect(()=>{
     if (callStatus === CallStatus.FINISHED){
-      router.push('/');
+      if(type==='generate'){
+        router.push('/');
+      }else{
+        handleGenerateFeedback(messages);
+      }
     }
   },[messages,callStatus,type,useId]);
   // const status = CallStatus.FINISHED; naak koncham doubt undhi 
@@ -91,7 +111,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
             userid: userId,
           },
         }
-      );
+      )
     } else {
       let formattedQuestions = "";
       if (questions) {
