@@ -118,3 +118,5 @@ export async function isAuthenticated() {
   const user = await getCurrentUser(); // Check for user using cookie
   return !!user;
 }
+
+
