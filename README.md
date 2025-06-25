@@ -9,11 +9,7 @@
 
 - [✨ Features](#-features)
 - [🛠 Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [🖼️ Preview](#️-preview)
-- [📁 Project Structure](#-project-structure)
-- [📚 What I Learned](#-what-i-learned)
-- [🙌 Credits](#-credits)
+
 
 ---
 
